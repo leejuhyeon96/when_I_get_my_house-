@@ -1,0 +1,39 @@
+<!doctype html>
+<head>
+<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+
+	<title>자바스크립트 과제</title>
+	<style>
+		input{font-size:1em;}
+		button{font-size:1em;}
+		body{font-size:2em;}
+		html {font-family: 'Spoqa Han Sans', 'Sans-serif'; }
+	</style>
+</head>
+
+<body>
+	<h1 id="display">내가 원하는 집을 언제 살 수 있을까?</h1>
+	<br>
+	<input type="text" id="housePrice" placeholder="몇억짜리 집인지 쓰세요."> 억  
+
+	<input type="text" id="myMoney" placeholder="당신의 연봉을 알려주세요."> 만원
+	<br><br>
+	<button id="action">계산하기</button>
+
+	
+	<script>
+		action.onclick = function(){
+			console.log("OK");
+			
+			
+		}
+
+	function theDay(myMoney, housePrice){
+		var theDay = (myMoney / housePrice)
+		//Math.ceil(a)
+		var text = "당신이 집을 살 수 있게 되는 해는" + "theDay" + "입니다.";
+		display.innerHTML = text;
+	}
+
+	</script>
+</body>
