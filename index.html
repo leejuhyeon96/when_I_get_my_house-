@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<h1 id="display">내가 원하는 집을 언제 살 수 있을까?</h1>
+	<h1 id="display">내가 원하는 집은 언제 살 수 있을까?</h1>
 	<br>
 	<input type="text" id="price" placeholder="몇억짜리 집인지 쓰세요."> 억  
 
@@ -32,7 +32,7 @@
 	function theDay(myMoney, housePrice){
 		var theDay = (housePrice *10000) / myMoney;
 		//Math.ceil(a)
-		var text = "당신은" + theDay + "년 후에 집을 살 수 있습니다.";
+		var text = "당신은 " + theDay + "년 후에 집을 살 수 있습니다.";
 		display.innerHTML = text + "<img src='./zz.jpg'style=lineheight:30px;>";
 	}
 
