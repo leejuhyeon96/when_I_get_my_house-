@@ -14,9 +14,9 @@
 <body>
 	<h1 id="display">내가 원하는 집을 언제 살 수 있을까?</h1>
 	<br>
-	<input type="text" id="housePrice" placeholder="몇억짜리 집인지 쓰세요."> 억  
+	<input type="text" id="price" placeholder="몇억짜리 집인지 쓰세요."> 억  
 
-	<input type="text" id="myMoney" placeholder="당신의 연봉을 알려주세요."> 만원
+	<input type="text" id="money" placeholder="당신의 연봉을 알려주세요."> 만원
 	<br><br>
 	<button id="action">계산하기</button>
 
@@ -24,15 +24,16 @@
 	<script>
 		action.onclick = function(){
 			console.log("OK");
-			
-			
+			var myMoney = money.value;
+			var housePrice = price.value;
+			theDay(myMoney, housePrice)
 		}
 
 	function theDay(myMoney, housePrice){
-		var theDay = (myMoney / housePrice)
+		var theDay = (housePrice *10000) / myMoney;
 		//Math.ceil(a)
-		var text = "당신이 집을 살 수 있게 되는 해는" + "theDay" + "입니다.";
-		display.innerHTML = text;
+		var text = "당신은" + theDay + "년 후에 집을 살 수 있습니다.";
+		display.innerHTML = text + "<img src='./zz.jpg'style=lineheight:30px;>";
 	}
 
 	</script>
