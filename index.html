@@ -27,14 +27,23 @@
 			var myMoney = money.value;
 			var housePrice = price.value;
 			theDay(myMoney, housePrice)
+
 		}
 
 	function theDay(myMoney, housePrice){
-		var theDay = (housePrice *10000) / myMoney;
-		//Math.ceil(a)
-		var text = "당신은 " + theDay + "년 후에 집을 살 수 있습니다.";
+		var theDay = Math.round(((housePrice *10000) / myMoney)*100)/100;
+		
+
+
+
+		var text = "당신이 " + "숨만 쉬고 돈을 모으면 " +theDay + "년 후에 집을 살 수 있습니다.<br><br>";
 		display.innerHTML = text + "<img src='./zz.jpg'style=lineheight:30px;>";
 	}
 
-	</script>
+</script>
+
+<style>
+body{font-size:25px;}
+</style>
+
 </body>
